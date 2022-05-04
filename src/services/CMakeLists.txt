@@ -20,6 +20,9 @@ endmacro()
 # second argument is the folder of the service
 
 add_service(bridge pcn-bridge)
+add_service(ctxwriter pcn-ctxwriter)
+add_service(mapwriter pcn-mapwriter)
+add_service(mapreader pcn-mapreader)
 add_service(ddosmitigator pcn-ddosmitigator)
 add_service(firewall pcn-firewall)
 add_service(helloworld pcn-helloworld)

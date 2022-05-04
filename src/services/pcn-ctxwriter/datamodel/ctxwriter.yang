@@ -1,0 +1,29 @@
+module ctxwriter {
+  yang-version 1.1;
+  namespace "http://polycube.network/ctxwriter";
+  prefix "ctxwriter";
+
+  import polycube-base { prefix "polycube-base"; }
+  import polycube-standard-base { prefix "polycube-standard-base"; }
+
+  organization "Polycube open source project";
+  description "YANG data model for the Polycube CtxWriter service";
+
+  polycube-base:service-description "CtxWriter Service";
+  polycube-base:service-version "2.0";
+  polycube-base:service-name "ctxwriter";
+  polycube-base:service-min-kernel-version "4.14.0";
+
+  leaf action {
+    type enumeration {
+      enum READ;
+      enum WRITE;
+    }
+    default READ;
+    description "Action performed on the received packet (i.e.,READ, WRITE headers: READ)";
+  }
+
+
+  uses "polycube-standard-base:standard-base-yang-module";
+
+}
